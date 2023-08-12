@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "jcc"
+version = "0.0.1"
+description = "Color conversion functions that can be used with numba."
+authors = ["Garrett Shipley <garrett.shipley7+github@gmail.com>"]
+license = "BSD3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
