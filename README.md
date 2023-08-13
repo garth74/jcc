@@ -1,6 +1,6 @@
 # JCC
 
-This package provides a few color conversion functions that can be jit compiled using numba. This package also provides a $\Delta$
+This package provides a few color conversion functions that can be jit compiled using numba.
 
 ## Supported conversions
 
