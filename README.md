@@ -1,6 +1,10 @@
 # JCC
 
-This package provides a few color conversion functions that can be jit compiled using numba.
+This package provides several color conversion methods that are compatibile with
+[numba](https://github.com/numba/numba). It also provides a
+[color quantization](https://en.wikipedia.org/wiki/Color_quantization) procedure
+which can reduce an image to a set of predetermined pixels. This isn't ideal for
+compression tasks but is useful for tagging an image with color names.
 
 ## Supported conversions
 
