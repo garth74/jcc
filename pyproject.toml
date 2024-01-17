@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "jcc"
-version = "0.0.1"
+version = "0.1.0"
 description = "Color conversion functions that can be used with numba."
 authors = ["Garrett Shipley <garrett.shipley7+github@gmail.com>"]
 license = "BSD3"
@@ -8,11 +8,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
-numba = "^0.57.1"
+numba = "^0.58.1"
 
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.7.0"
 pytest = "^7.4.0"
 mypy = "^1.5.0"
 

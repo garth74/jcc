@@ -1,4 +1,5 @@
 # type: ignore
+# ruff: noqa: E741
 """
 This contains low level conversion functions.
 
@@ -9,7 +10,7 @@ https://www.easyrgb.com/en/math.php
 # fmt: off
 
 import numpy as np
-from numba import TypingError
+from numba.core.errors import NumbaTypeError
 from numba.extending import overload
 
 from jcc._numba import njit, prange, register_jitable, types
@@ -77,14 +78,14 @@ def conversion_overload(overload_func, **overload_kwargs):
                 # ensure signature matches without forcing the
                 # base_implementation_func's signature
                 return lambda e, f, g: base_implementation_func(e, f, g)
-            raise TypingError
+            raise NumbaTypeError
 
         @overload(overload_func, **overload_kwargs)
         def tuple_impl(e, f, g):
             # implementation when first argument is a tuple
             if isinstance(e, types.UniTuple) and len(e) == 3:
                 return lambda e, f, g: base_implementation_func(e[0], e[1], e[2])
-            raise TypingError
+            raise NumbaTypeError
 
         @overload(overload_func, **overload_kwargs)
         def array_impl(e, f, g):
@@ -146,7 +147,7 @@ def conversion_overload(overload_func, **overload_kwargs):
 
                     return impl4D
 
-            raise TypingError
+            raise NumbaTypeError
 
         return base_implementation_func
 
@@ -183,7 +184,7 @@ def index_conversions_overloads(overload_func, **overload_kwargs):
                 # ensure signature matches without forcing the
                 # base_implementation_func's signature
                 return lambda e, f, g: base_implementation_func(e, f, g)
-            raise TypingError
+            raise NumbaTypeError
 
         # NO TUPLE IMPLEMENTATION
         if func_name == "_rgb_to_ind":
@@ -213,7 +214,7 @@ def index_conversions_overloads(overload_func, **overload_kwargs):
 
                         return impl
 
-                raise TypingError
+                raise NumbaTypeError
 
         else:
 
@@ -231,7 +232,7 @@ def index_conversions_overloads(overload_func, **overload_kwargs):
 
                     return impl
 
-                raise TypingError
+                raise NumbaTypeError
 
         return base_implementation_func
 
