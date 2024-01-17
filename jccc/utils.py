@@ -6,9 +6,9 @@ from pathlib import Path
 import numpy as np
 import numpy.typing as npt
 
-from jcc._numba import njit, prange
-from jcc.convert import rgb_to_lab
-from jcc.diff import delta_e_cie2000
+from jccc._numba import njit, prange
+from jccc.convert import rgb_to_lab
+from jccc.diff import delta_e_cie2000
 
 Float16Array: t.TypeAlias = npt.NDArray[np.float16]
 Float32Array: t.TypeAlias = npt.NDArray[np.float32]

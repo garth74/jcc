@@ -13,7 +13,7 @@ import numpy as np
 from numba.core.errors import NumbaTypeError
 from numba.extending import overload
 
-from jcc._numba import njit, prange, register_jitable, types
+from jccc._numba import njit, prange, register_jitable, types
 
 _1_DIV_255: float =                           1.0 / 255.0
 _1_DIV_360: float =                           1.0 / 360.0

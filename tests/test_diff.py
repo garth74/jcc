@@ -3,7 +3,7 @@ import math
 
 import pytest
 
-from jcc.diff import delta_e_cie2000
+from jccc.diff import delta_e_cie2000
 
 
 def load_data() -> list[dict[str, float]]:

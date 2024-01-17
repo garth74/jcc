@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 from numpy.testing import assert_array_equal
 
-import jcc.convert as jcc
+import jccc.convert as jcc
 
 ConversionFunc: t.TypeAlias = (
     t.Callable[[float, float, float], tuple[float, float, float]]

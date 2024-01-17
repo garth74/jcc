@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "jcc"
+name = "jccc"
 version = "0.1.0"
-description = "Color conversion functions that can be used with numba."
+description = "Jit compiled color conversion."
 authors = ["Garrett Shipley <garrett.shipley7+github@gmail.com>"]
 license = "BSD3"
 readme = "README.md"

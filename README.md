@@ -1,4 +1,4 @@
-# JCC
+# JCCC
 
 This package provides several color conversion methods that are compatibile with
 [numba](https://github.com/numba/numba). It also provides a

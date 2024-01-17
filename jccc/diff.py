@@ -1,7 +1,7 @@
 # fmt: off
 import math
 
-from jcc._numba import njit
+from jccc._numba import njit
 
 _25_POW_7: float =         float(6_103_515_625)
 _2PI: float =              float(2.0 * math.pi)

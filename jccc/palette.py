@@ -6,8 +6,8 @@ from pathlib import Path
 import numpy as np
 import numpy.typing as npt
 
-from jcc.convert import rgb_to_ind, rgb_to_lab
-from jcc.utils import create_lookup_table, get_all_lab, get_data_path
+from jccc.convert import rgb_to_ind, rgb_to_lab
+from jccc.utils import create_lookup_table, get_all_lab, get_data_path
 
 Float64Array: t.TypeAlias = npt.NDArray[np.float64]
 Uint8Array: t.TypeAlias = npt.NDArray[np.uint8]
