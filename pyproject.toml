@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "jccc"
-version = "0.1.0"
+version = "0.1.1"
 description = "Jit compiled color conversion."
 authors = ["Garrett Shipley <garrett.shipley7+github@gmail.com>"]
 license = "BSD3"
