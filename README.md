@@ -1,10 +1,12 @@
 # JCCC
 
-This package provides several color conversion methods that are compatibile with
-[numba](https://github.com/numba/numba). It also provides a
-[color quantization](https://en.wikipedia.org/wiki/Color_quantization) procedure
-which can reduce an image to a set of predetermined pixels. This isn't ideal for
-compression tasks but is useful for tagging an image with color names.
+This package provides several color conversion methods that are compatible with [numba](https://github.com/numba/numba). It also provides a [color quantization](https://en.wikipedia.org/wiki/Color_quantization) procedure, which can reduce an image to a set of predetermined pixels. This isn't ideal for compression tasks but is useful for tagging images with color names.
+
+## Installation
+
+```
+pip install jccc
+```
 
 ## Supported conversions
 
