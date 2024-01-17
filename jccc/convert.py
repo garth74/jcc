@@ -78,14 +78,15 @@ def conversion_overload(overload_func, **overload_kwargs):
                 # ensure signature matches without forcing the
                 # base_implementation_func's signature
                 return lambda e, f, g: base_implementation_func(e, f, g)
-            raise NumbaTypeError
+
+            raise NumbaTypeError("NumbaTypeError")
 
         @overload(overload_func, **overload_kwargs)
         def tuple_impl(e, f, g):
             # implementation when first argument is a tuple
             if isinstance(e, types.UniTuple) and len(e) == 3:
                 return lambda e, f, g: base_implementation_func(e[0], e[1], e[2])
-            raise NumbaTypeError
+            raise NumbaTypeError("NumbaTypeError")
 
         @overload(overload_func, **overload_kwargs)
         def array_impl(e, f, g):
@@ -147,7 +148,7 @@ def conversion_overload(overload_func, **overload_kwargs):
 
                     return impl4D
 
-            raise NumbaTypeError
+            raise NumbaTypeError("NumbaTypeError")
 
         return base_implementation_func
 
@@ -184,7 +185,7 @@ def index_conversions_overloads(overload_func, **overload_kwargs):
                 # ensure signature matches without forcing the
                 # base_implementation_func's signature
                 return lambda e, f, g: base_implementation_func(e, f, g)
-            raise NumbaTypeError
+            raise NumbaTypeError("NumbaTypeError")
 
         # NO TUPLE IMPLEMENTATION
         if func_name == "_rgb_to_ind":
@@ -214,7 +215,7 @@ def index_conversions_overloads(overload_func, **overload_kwargs):
 
                         return impl
 
-                raise NumbaTypeError
+                raise NumbaTypeError("NumbaTypeError")
 
         else:
 
@@ -232,7 +233,7 @@ def index_conversions_overloads(overload_func, **overload_kwargs):
 
                     return impl
 
-                raise NumbaTypeError
+                raise NumbaTypeError("NumbaTypeError")
 
         return base_implementation_func
 
