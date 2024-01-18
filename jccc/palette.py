@@ -86,7 +86,7 @@ class _BasePalette:
                 err.add_note("Call `write_lookup_table` first.")
                 raise err
 
-            self._lookup_table = np.load(path)
+            self._lookup_table = np.load(path)[self._name]
 
         return self._lookup_table
 
@@ -108,8 +108,8 @@ class _BasePalette:
 
         all_lab = get_all_lab()
         arr_lab = rgb_to_lab(self.rgbs)
-        lookup_table = create_lookup_table(arr_lab, all_lab)
-        np.savez_compressed(path, lookup_table)
+        kwargs = {self._name: create_lookup_table(arr_lab, all_lab)}
+        np.savez_compressed(path, **kwargs)
 
     @property
     def data(self) -> AnyArray:

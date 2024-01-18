@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "jccc"
-version = "0.1.1"
+version = "0.1.2"
 description = "Jit compiled color conversion."
 authors = ["Garrett Shipley <garrett.shipley7+github@gmail.com>"]
 license = "BSD3"
@@ -12,6 +12,7 @@ keywords = ["jit", "color conversion", "python3"]
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
 numba = "^0.58.1"
+numpy = "^1.26.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
